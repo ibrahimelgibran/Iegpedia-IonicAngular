@@ -7,8 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./score.page.scss'],
 })
 export class ScorePage implements OnInit {
-  count: number = 0;
-
   constructor(private route: Router) {}
 
   backHome() {
@@ -16,6 +14,8 @@ export class ScorePage implements OnInit {
   }
 
   ngOnInit() {}
+
+  count: number = 0;
 
   up() {
     this.count++;
