@@ -1,55 +1,45 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>score</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">score</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons>
+    <ion-buttons slot="start">
       <ion-icon
         style="margin-left: 15px"
         size="large"
         name="basketball-outline"
-      ></ion-icon>
-      <ion-title>IEGCODE</ion-title>
+      >
+      </ion-icon>
     </ion-buttons>
+    <ion-title>SCORE IEGCODE APPS</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Tech </ion-card-subtitle>
-      <ion-card-title>Information</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Stay tuned for the latest and most current technology information, don't
-      miss out on keeping up with the latest in technology.
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="floating" type="text">Full Name</ion-label>
-        <ion-input [(ngModel)]="info.fullname" type="text"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" type="email">Email</ion-label>
-        <ion-input [(ngModel)]="info.email" type="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" type="text">Tanggal Lahir</ion-label>
-        <br /><br />
-        <ion-datetime
-          value="2024-03-05T15:43:40.394Z"
-          [(ngModel)]="info.dob"
-          display-timezone="utc"
-        ></ion-datetime>
-        <br />
-      </ion-item>
-      <ion-button color="primary" (click)="saveDate()" expand="block"
-        >Submit</ion-button
+    <ion-text color="secondary" class="ion-text-center">
+      <h1 class="ion-2x" style="font-size: 10em">{{ count }}</h1>
+      <ion-button color="success" (click)="up()" expand="block"
+        >Up ⬆</ion-button
       >
-      <ion-button color="warning" (click)="scorePage()" expand="block"
-        >Score Iegcode Apps</ion-button
+      <ion-button color="warning" (click)="down()" expand="block"
+        >Down ⬇</ion-button
       >
-    </ion-card-content>
+      <ion-button color="primary" (click)="backHome()" expand="block"
+        >Back Home 🏠</ion-button
+      >
+    </ion-text>
   </ion-card>
 
   <ion-card>
@@ -122,6 +112,7 @@
       </p>
     </ion-label>
   </ion-item>
+
   <ion-item detail="true">
     <ion-label>
       <h3>Spring Boot</h3>
