@@ -15,15 +15,15 @@ export class ScorePage implements OnInit {
 
   ngOnInit() {}
 
-  no: number = 0;
+  count: number = 0;
 
   up() {
-    this.no++;
+    this.count++;
   }
 
   down() {
-    if (this.no > 0) {
-      this.no--;
+    if (this.count > 0) {
+      this.count--;
     }
   }
 }
